@@ -9,47 +9,56 @@ import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import Design from '@/assets/images/categories/design.jpg';
+import Development from '@/assets/images/categories/development.jpg';
+import Marketing from '@/assets/images/categories/marketing.jpg';
+import ItSoftware from '@/assets/images/categories/it_software.jpg';
+import Personal from '@/assets/images/categories/personal_development.jpg';
+import Business from '@/assets/images/categories/business.jpg';
+import Photography from '@/assets/images/categories/photography.jpg';
+import Music from '@/assets/images/categories/music.jpg';
+import Course from '@/assets/images/courses/course_1.png';
+
 const categories = [
   {
     id: 1,
     title: 'Design',
-    thumbnail: '/assets/images/categories/design.jpg',
+    thumbnail: Design,
   },
-
   {
     id: 3,
     title: 'Development',
-    thumbnail: '/assets/images/categories/development.jpg',
+    thumbnail: Development,
   },
   {
     id: 4,
     title: 'Marketing',
-    thumbnail: '/assets/images/categories/marketing.jpg',
+    thumbnail: Marketing,
   },
   {
     id: 5,
     title: 'IT & Software',
-    thumbnail: '/assets/images/categories/it_software.jpg',
+    thumbnail: ItSoftware,
   },
   {
     id: 6,
     title: 'Personal Development',
-    thumbnail: '/assets/images/categories/personal_development.jpg',
+    thumbnail: Personal,
   },
   {
     id: 7,
     title: 'Business',
-    thumbnail: '/assets/images/categories/business.jpg',
+    thumbnail: Business,
   },
   {
     id: 8,
     title: 'Photography',
-    thumbnail: '/assets/images/categories/photography.jpg',
+    thumbnail: Photography,
   },
   {
     id: 9,
     title: 'Music',
-    thumbnail: '/assets/images/categories/music.jpg',
+    thumbnail: Music,
   },
 ];
 
@@ -194,7 +203,7 @@ const HomePage = () => {
                 <div className='group hover:shadow-sm transition overflow-hidden border rounded-lg p-3 h-full'>
                   <div className='relative w-full aspect-video rounded-md overflow-hidden'>
                     <Image
-                      src='/assets/images/courses/course_1.png'
+                      src={Course}
                       alt={'course'}
                       className='object-cover'
                       fill
