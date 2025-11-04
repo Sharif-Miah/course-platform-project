@@ -88,7 +88,7 @@ const HomePage = async () => {
                 className='relative overflow-hidden rounded-lg border bg-background p-2 hover:scale-105 transition-all duration-500 ease-in-out'>
                 <div className='flex  flex-col gap-4 items-center justify-between rounded-md p-6'>
                   <Image
-                    src={`/assets/images/categories/${category.thumbnail}`}
+                    src={category?.thumbnail}
                     alt={category.title}
                     width={100}
                     height={100}
