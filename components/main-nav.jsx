@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { cn } from '@/lib/utils';
 
 import { MobileNav } from '@/components/mobile-nav';
-import lwsLogo from '@/assets/lws_logo.svg';
+import sharifLogo from '@/assets/sharif.svg';
 import Image from 'next/image';
 import { X } from 'lucide-react';
 import { Command } from 'lucide-react';
@@ -27,7 +27,7 @@ export function MainNav({ items, children }) {
         <Link href='/'>
           <Image
             className='max-w-[100px]'
-            src={lwsLogo}
+            src={sharifLogo}
             alt='Logo'
           />
         </Link>
