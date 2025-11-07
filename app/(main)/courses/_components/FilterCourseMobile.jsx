@@ -1,18 +1,9 @@
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
-import { cn } from '@/lib/utils';
-import { ChevronDown } from 'lucide-react';
-import { MessageSquareText } from 'lucide-react';
+'use client';
+
 import { Filter } from 'lucide-react';
 import {
   Sheet,
-  SheetClose,
   SheetContent,
-  SheetDescription,
-  SheetFooter,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -24,7 +15,6 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { Checkbox } from '@/components/ui/checkbox';
-import { X } from 'lucide-react';
 import { useState } from 'react';
 
 const PRICE_OPTIONS = [
