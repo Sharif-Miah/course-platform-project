@@ -6,15 +6,6 @@ import { ArrowRightIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import Design from '@/assets/images/categories/design.jpg';
-import Development from '@/assets/images/categories/development.jpg';
-import Marketing from '@/assets/images/categories/marketing.jpg';
-import ItSoftware from '@/assets/images/categories/it_software.jpg';
-import Personal from '@/assets/images/categories/personal_development.jpg';
-import Business from '@/assets/images/categories/business.jpg';
-import Photography from '@/assets/images/categories/photography.jpg';
-import Music from '@/assets/images/categories/music.jpg';
-import Course from '@/assets/images/courses/course_1.png';
 import { getCourseList } from '@/queries/courses';
 import { getCategories } from '@/queries/categories';
 import CourseCard from './courses/_components/CourseCard';

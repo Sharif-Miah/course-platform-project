@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { cn } from '@/lib/utils';
 
 import { MobileNav } from '@/components/mobile-nav';
-import sharifLogo from '@/assets/sharif.svg';
+import sharifLogo from '@/assets/lws.svg';
 import Image from 'next/image';
 import { X } from 'lucide-react';
 import { Command } from 'lucide-react';

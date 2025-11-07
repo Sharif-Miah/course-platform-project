@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import logo from '@/assets/sharif.svg';
+import logo from '@/assets/lws.svg';
 import { cn } from '@/lib/utils';
 export const Logo = ({ className = '' }) => {
   return (
