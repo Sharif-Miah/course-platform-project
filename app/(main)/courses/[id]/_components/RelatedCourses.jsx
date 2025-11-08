@@ -12,6 +12,7 @@ import { BookOpen } from 'lucide-react';
 import { formatPrice } from '@/lib/formatPrice';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import CourseImage from '@/assets/images/courses/course_1.png';
 
 const courses = [
   {

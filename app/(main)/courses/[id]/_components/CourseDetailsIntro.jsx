@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import CourseImage from '@/assets/images/courses/course_1.png';
+import { cn } from '@/lib/utils';
+import { buttonVariants } from '@/components/ui/button';
 
 const CourseDetailsIntro = () => {
   return (
