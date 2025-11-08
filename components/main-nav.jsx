@@ -26,7 +26,7 @@ export function MainNav({ items, children }) {
       <div className='flex gap-6 lg:gap-10'>
         <Link href='/'>
           <Image
-            className='max-w-[100px]'
+            className='max-w-[130px]'
             src={sharifLogo}
             alt='Logo'
           />

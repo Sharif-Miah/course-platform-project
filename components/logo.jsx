@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 export const Logo = ({ className = '' }) => {
   return (
     <Image
-      className={cn('max-w-[100px]', className)}
+      className={cn('max-w-[150px]', className)}
       src={logo}
       alt='logo'
     />
