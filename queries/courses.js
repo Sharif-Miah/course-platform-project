@@ -1,12 +1,12 @@
 import { Course } from '@/model/course-model';
 import { Category } from '@/model/category-model';
 import { User } from '@/model/user-model';
-import { Testimonial } from '@/model/testimonial-model';
 import { Module } from '@/model/module.model';
 import {
   replaceMongoIdInArray,
   replaceMongoIdInObject,
 } from '@/lib/convertData';
+import { Testimonial } from '@/model/testimonial-model';
 
 export async function getCourseList() {
   const courses = await Course.find({})
