@@ -3,9 +3,14 @@ import { Presentation } from 'lucide-react';
 import { UsersRound } from 'lucide-react';
 import { Star } from 'lucide-react';
 import { MessageSquare } from 'lucide-react';
+import { getCourseDetailsByInstructor } from '@/queries/courses';
 
-const CourseInstructor = ({ course }) => {
+const CourseInstructor = async ({ course }) => {
   const instructor = course?.instructor;
+  const courseDetailsByInstructor = await getCourseDetailsByInstructor(
+    instructor._id.toString()
+  );
+
   return (
     <div className='bg-gray-50 rounded-md p-8'>
       <div className='md:flex md:gap-x-5 mb-8'>
@@ -29,7 +34,7 @@ const CourseInstructor = ({ course }) => {
             <ul className='list space-y-4'>
               <li className='flex items-center space-x-3'>
                 <Presentation className='text-gray-600' />
-                <div>10+ Courses</div>
+                <div>{courseDetailsByInstructor?.courses} Course(s)</div>
               </li>
               <li className='flex space-x-3'>
                 <UsersRound className='text-gray-600' />
@@ -47,14 +52,7 @@ const CourseInstructor = ({ course }) => {
           </div>
         </div>
       </div>
-      <p className='text-gray-600'>
-        There are many variations of passages of Lorem Ipsum available, but the
-        majority have suffered alteration in some form, by injected humour, or
-        randomised words which do not look even slightly believable. If you are
-        going to use a passage of Lorem Ipsum, you need to be sure there is not
-        anything embarrassing hidden in the middle of text. All the Lorem Ipsum
-        generators on the Internet tend.
-      </p>
+      <p className='text-gray-600'>{instructor.bio}</p>
     </div>
   );
 };
