@@ -7,6 +7,7 @@ import {
   replaceMongoIdInObject,
 } from '@/lib/convertData';
 import { Testimonial } from '@/model/testimonial-model';
+import { getEnrollmentsForCourse } from './enrollments';
 
 export async function getCourseList() {
   const courses = await Course.find({})
@@ -66,9 +67,23 @@ export async function getCourseDetails(id) {
 }
 
 export async function getCourseDetailsByInstructor(instructorId) {
-  const courses = await Course.find({ instructor: instructorId });
+  const courses = await Course.find({ instructor: instructorId }).lean();
+
+  const enrollments = await Promise.all(
+    courses.map(async (course) => {
+      const enrollment = await getEnrollmentsForCourse(course._id.toString());
+      return enrollment;
+    })
+  );
+
+  const totalEnrollments = enrollments.reduce((item, currentValue) => {
+    return item.length + currentValue.length;
+  });
+
+  console.log(totalEnrollments);
 
   return {
     courses: courses.length,
+    enrollments: totalEnrollments,
   };
 }
