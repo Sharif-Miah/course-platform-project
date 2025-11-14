@@ -37,7 +37,10 @@ export const {
             console.error('User not found');
             throw new Error('User not found');
           }
-        } catch (error) {}
+        } catch (error) {
+          console.error(error);
+          throw new Error(error);
+        }
       },
     }),
   ],
