@@ -12,10 +12,6 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 
 export function LoginForm() {
-  const onSubmit = (event) => {
-    event.preventDefault();
-  };
-
   return (
     <Card className='mx-auto max-w-sm w-full'>
       <CardHeader>
@@ -25,7 +21,7 @@ export function LoginForm() {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <form onSubmit={onSubmit}>
+        <form>
           <div className='grid gap-4'>
             <div className='grid gap-2'>
               <Label htmlFor='email'>Email</Label>
