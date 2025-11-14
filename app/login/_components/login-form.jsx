@@ -82,11 +82,20 @@ export function LoginForm(event) {
         </form>
         <div className='mt-4 text-center text-sm'>
           Don&apos;t have an account?{' '}
-          <Link
-            href='register'
-            className='underline'>
-            Register
-          </Link>
+          <p>
+            Register as{' '}
+            <Link
+              href='/register/instructor'
+              className='underline'>
+              Instructor
+            </Link>{' '}
+            or{' '}
+            <Link
+              href='/register/student'
+              className='underline'>
+              Student
+            </Link>
+          </p>
         </div>
       </CardContent>
     </Card>
