@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
+import Google from '@/assets/google.png';
 
 import { doSocialLogin } from '@/app/actions';
 
@@ -17,7 +18,7 @@ const SocialLogins = () => {
             name='action'
             value='google'>
             <Image
-              src='/google.png'
+              src={Google}
               alt='google'
               width={40}
               height={40}
